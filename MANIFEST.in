@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include sipdo *.css
+recursive-include sipdo *.csv
+recursive-include sipdo *.html
+recursive-include sipdo *.ico
+recursive-include sipdo *.js
+recursive-include sipdo *.json
+recursive-include sipdo *.md
+recursive-include sipdo *.png
+recursive-include sipdo *.py
+recursive-include sipdo *.svg
+recursive-include sipdo *.txt
+recursive-exclude sipdo *.pyc
