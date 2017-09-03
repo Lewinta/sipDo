@@ -18,6 +18,15 @@ frappe.ui.form.on('Paciente', {
             }
         });
 	},
+	fecha_de_nacimiento: function(frm){
+		var today = frappe.datetime.get_today()
+		var f_nacimiento = moment(frm.doc.fecha_de_nacimiento, "YYYY-MM-DD")
+
+		// let make the diff
+		var edad = moment(today, "YYYY-MM-DD").diff(f_nacimiento, 'years')
+
+		frm.set_value("edad", edad)
+	},
 	validate: function(frm){
 		//Validar que si alguno de los dos tiene data, el otro tambien 
 		if(frm.doc.ars || frm.doc.nss){
