@@ -5,9 +5,10 @@ frappe.ui.form.on('Paciente', {
 	refresh: function(frm) {
 		//El usuario solo puede agregar la ARS al crear el paciente, luego solo las ARS pueden modificar estos campos 
 		if (!frm.doc.__islocal){
-			/*frm.set_df_property("nss","read_only",1)
-			frm.set_df_property("ars","read_only",1)*/
+			frm.set_df_property("nss","read_only",1)
+			frm.set_df_property("ars","read_only",1)
 		}
+
 		// Filtro solo para ver las ARS 
 		frm.set_query("ars", function() {
             return {

@@ -90,13 +90,13 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"sipdo.tasks.all"
 # 	],
-# 	"daily": [
-# 		"sipdo.tasks.daily"
-# 	],
+ 	"daily": [
+ 		"sipdo.scheduler.calcular_edades",
+ 	],
 # 	"hourly": [
 # 		"sipdo.tasks.hourly"
 # 	],
@@ -106,7 +106,7 @@ app_license = "MIT"
 # 	"monthly": [
 # 		"sipdo.tasks.monthly"
 # 	]
-# }
+ }
 
 # Testing
 # -------
